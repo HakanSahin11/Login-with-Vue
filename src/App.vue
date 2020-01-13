@@ -1,20 +1,59 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app"> 
+  <!--  <nav>
+      <router-link to="./components/Login.vue" >Login</router-link>
+      <router-link to="./components/MainSite.vue" >Main</router-link>
+    </nav>
+    <router-view/> -->
+
+   <Login msg="Welcome to Your Vue.js App"/> 
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Login from './components/Login.vue'
+
+/*
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
+
+const LoginInitiate  = {
+  template: '<div>Login</div>'
+}
+
+const MainSiteInitiate = {
+  template: '<div>MainSite</div>'
+}
+
+const router = new VueRouter({
+  routes: [
+    {path: '/Login', component:LoginInitiate},
+    {path: '/MainSite', component:MainSiteInitiate},
+  ]
+})
+*/
+/*
+new Vue({
+  router
+}).$mount('#app')
+this.$router.push('/Login')
+*/
 
 export default {
-  name: 'app',
+  name: "App",
   components: {
-    HelloWorld
+    Login
+  },
+  data() {
+    return {
+    results: [],
+    };
   }
 }
 </script>
+
 
 <style>
 #app {
@@ -25,4 +64,6 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+
 </style>
